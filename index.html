@@ -5,27 +5,33 @@
   <meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#155E3B">
-  <meta name="description" content="Professional mosquito and tick control in Delaware. Seasonal protection with scheduled treatments every 3–4 weeks. Call (302) 832-8040.">
+  <meta name="description" content="Season-long mosquito and tick control in Delaware so you can enjoy your yard again. Professional, local, and licensed.">
   <meta name="keywords" content="mosquito control Delaware, tick control Delaware, mosquito treatment, Hockessin, Newark, Northern Delaware">
   <meta name="author" content="Mosquito Solutions">
-  <link rel="canonical" href="https://mosquitosolutionsde.com">
   <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="canonical" href="https://mosquitosolutionsde.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Mosquito Solutions">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mosquito Solutions — Mosquito & Tick Control in Northern Delaware">
+  <meta property="og:description" content="Professional mosquito and tick control in Delaware with scheduled treatments every 3–4 weeks.">
+  <meta property="og:image" content="assets/img/og-placeholder.jpg">
+  <meta property="og:locale" content="en_US">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- CSS & JS -->
   <link rel="preload" href="assets/css/styles.css?v=7" as="style">
   <link rel="stylesheet" href="assets/css/styles.css?v=7">
-
-  <!-- JS (simple mobile menu if you add it later) -->
   <script defer src="assets/js/main.js"></script>
 
   <title>Mosquito Solutions — Mosquito & Tick Control in Northern Delaware</title>
 
-  <!-- LocalBusiness schema -->
+  <!-- LocalBusiness structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,20 +60,23 @@
 
   <!-- HEADER -->
   <header class="ms-header">
-    <div class="container">
+    <div class="container ms-header-inner">
       <a href="index.html" class="ms-logo-link" aria-label="Mosquito Solutions home">
         <img class="ms-logo" src="assets/img/logo.png" alt="Mosquito Solutions logo">
       </a>
-      <!-- Company name across top (fills the empty space nicely) -->
       <h1 class="ms-company-name">Mosquito Solutions</h1>
 
-      <nav aria-label="Main" class="ms-nav">
+      <button class="ms-menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="ms-nav" aria-label="Main">
         <a class="ms-nav__link active" href="index.html">Home</a>
         <a class="ms-nav__link" href="our-services.html">Our Services</a>
         <a class="ms-nav__link" href="about.html">About Us</a>
         <a class="ms-nav__link" href="faq.html">FAQ</a>
         <a class="ms-nav__link" href="contact.html">Contact</a>
-        <a class="ms-nav__link" aria-disabled="true" href="#">Client Portal</a>
+        <a class="ms-nav__link" href="https://www2.lawngateway.com/LawnSolutionsDelaware/" target="_blank" rel="noopener">Client Portal</a>
       </nav>
     </div>
   </header>
@@ -77,18 +86,24 @@
     <section class="ms-hero">
       <div class="container ms-hero__grid">
         <figure class="ms-hero__photo" aria-hidden="true">
-          <!-- Use your best landscape photo here -->
-          <img src="assets/img/hero.jpg" alt="">
+          <img src="assets/img/hero-main.jpg" alt="Technician treating backyard for mosquitoes and ticks">
         </figure>
 
-        <aside class="ms-hero__card" aria-label="Highlight">
-          <h1>No more ending the night early – enjoy the outdoors</h1>
-          <p class="ms-hero__sub">Offering mosquito, flea & tick solutions for your property</p>
+        <article class="ms-hero__card">
+          <h2 class="h-serif">No more ending the night early — enjoy your yard again</h2>
+          <p class="ms-hero__sub">
+            Offering mosquito, flea &amp; tick solutions for your property.
+          </p>
           <div class="ms-hero__actions">
             <a class="btn btn-dark" href="tel:+13028328040">Call Now</a>
             <a class="btn btn-outline" href="our-services.html">Our Services</a>
           </div>
-        </aside>
+          <ul class="trust-badges" aria-label="Service highlights" style="margin-top:1rem;list-style:none;padding:0;">
+            <li>Scheduled treatments every 3–4 weeks</li>
+            <li>Licensed &amp; insured local company</li>
+            <li>No long-term contracts</li>
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -98,50 +113,99 @@
         <h2 class="h-serif">Enjoy your outdoor spaces again!</h2>
         <p>
           Our mosquito control program is designed to provide consistent protection throughout the season.
-          With six visits during peak mosquito activity, we ensure your yard stays comfortable and pest free.
+          With six visits during peak mosquito activity, we help keep your yard comfortable and pest free —
+          so you can focus on time with family and friends, not buzzing and bites.
         </p>
       </div>
     </section>
 
-    <!-- WHY MOSQUITOES MATTER (longer blip) -->
+    <!-- WHY MOSQUITOES MATTER -->
     <section class="section">
-      <div class="container narrow">
+      <div class="container">
         <div class="info-callout">
-          <h3 class="h-serif">Why mosquitoes matter</h3>
+          <h2 class="section-title h-serif">Why mosquitoes matter</h2>
           <p>
-            Mosquitoes aren’t just a nuisance — they can spread illnesses such as West Nile virus and Eastern Equine
-            Encephalitis in the U.S. Reducing populations around your home lowers bite exposure and helps protect your
-            family and pets. Our targeted applications focus on the shaded, moist areas where mosquitoes rest during the
-            day so evenings are calmer and more enjoyable.
+            Mosquitoes aren’t just a nuisance — they can spread illnesses such as West Nile virus and other
+            mosquito-borne diseases. Ticks can transmit Lyme disease and other infections. Reducing mosquito
+            and tick populations around your home lowers the risk of bites and helps protect your family and pets.
+          </p>
+          <p style="margin-top:.4rem;">
+            By targeting the shaded, humid areas where mosquitoes and ticks rest and breed, our treatments
+            break up their life cycle and help make your property a safer, more enjoyable place to be.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- APIARY (yellow band) -->
+    <!-- WHAT YOU GET -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title h-serif">What you get</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Scheduled Protection</h3>
+            <p>
+              Six visits during peak season to keep mosquito and tick populations down from spring through fall.
+              We monitor conditions and adjust as needed.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Targeted Treatment</h3>
+            <p>
+              We focus on shrubs, shaded areas, and other common resting spots around your property —
+              the places mosquitoes and ticks actually hide.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Transparent Pricing</h3>
+            <p>
+              Simple seasonal programs and one-time event sprays. No long-term contracts, just clear,
+              upfront pricing and friendly service.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- APIARY BAND -->
     <section class="ms-apiary">
       <div class="container ms-apiary__grid">
         <div class="ms-apiary__copy">
-          <h3>We operate our own apiary!</h3>
+          <h3 class="h-serif">We operate our own apiary</h3>
           <p>
-            Running an apiary gives us firsthand appreciation for pollinators and healthy ecosystems.
-            We apply EPA-registered products at the lowest effective rates and follow best practices to avoid harming
-            beneficial insects — protecting pollinators is always a priority.
+            As beekeepers, we experience firsthand how important pollinators are to a healthy landscape.
+            That perspective shapes how we treat every property — using best practices that prioritize
+            safety and avoid spraying blooms where bees typically forage.
+          </p>
+          <p style="margin-top:.4rem;">
+            Protecting pollinators while solving mosquito and tick problems is always a priority.
           </p>
         </div>
         <figure class="ms-apiary__photo" aria-hidden="true">
-          <!-- Friendly bee/box photo -->
-          <img src="assets/img/apiary.jpg" alt="">
+          <img src="assets/img/apiary.jpg" alt="Bees near a hive in a backyard apiary">
         </figure>
       </div>
     </section>
 
-    <!-- REVIEWS BAND (grass background) -->
+    <!-- REVIEWS / GRASS BAND -->
     <section class="ms-reviews">
       <div class="ms-reviews__overlay">
         <div class="container narrow">
-          <h2 class="h-serif">Buzzworthy Reviews</h2>
-          <p class="ms-reviews__soon">Reviews coming soon!</p>
+          <h2 class="h-serif">Buzzworthy reviews</h2>
+          <p class="ms-reviews__soon small">Reviews coming soon — we’re excited to share feedback from our neighbors in Delaware.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT BANNER -->
+    <section class="cta-band">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+        <p style="margin:0;">Ready to reclaim your yard from mosquitoes and ticks?</p>
+        <div class="svc-cta">
+          <a class="btn btn-dark" href="contact.html">Request a Quote</a>
+          <a class="btn btn-outline" href="tel:+13028328040">Call (302) 832-8040</a>
         </div>
       </div>
     </section>
@@ -164,6 +228,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="https://www2.lawngateway.com/LawnSolutionsDelaware/" target="_blank" rel="noopener">Client Portal</a></li>
         </ul>
       </nav>
       <div>
