@@ -6,16 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#155E3B">
   <meta name="description" content="Contact Mosquito Solutions to request a quote or ask questions about mosquito and tick control services.">
+  <meta name="author" content="Mosquito Solutions">
   <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="canonical" href="https://mosquitosolutionsde.com/contact.html">
 
-  <!-- Fonts -->
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Mosquito Solutions">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us — Mosquito Solutions">
+  <meta property="og:description" content="Send Mosquito Solutions a message or request a quote for mosquito and tick control services.">
+  <meta property="og:image" content="assets/img/og-placeholder.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Fonts & CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="preload" href="assets/css/styles.css?v=7" as="style">
   <link rel="stylesheet" href="assets/css/styles.css?v=7">
+  <script defer src="assets/js/main.js"></script>
 
   <title>Contact Us — Mosquito Solutions</title>
 </head>
@@ -25,19 +34,23 @@
 
   <!-- HEADER -->
   <header class="ms-header">
-    <div class="container">
+    <div class="container ms-header-inner">
       <a href="index.html" class="ms-logo-link" aria-label="Mosquito Solutions home">
         <img class="ms-logo" src="assets/img/logo.png" alt="Mosquito Solutions logo">
       </a>
       <h1 class="ms-company-name">Mosquito Solutions</h1>
 
-      <nav aria-label="Main" class="ms-nav">
+      <button class="ms-menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="ms-nav" aria-label="Main">
         <a class="ms-nav__link" href="index.html">Home</a>
         <a class="ms-nav__link" href="our-services.html">Our Services</a>
         <a class="ms-nav__link" href="about.html">About Us</a>
         <a class="ms-nav__link" href="faq.html">FAQ</a>
         <a class="ms-nav__link active" href="contact.html">Contact</a>
-        <a class="ms-nav__link" aria-disabled="true" href="#">Client Portal</a>
+        <a class="ms-nav__link" href="https://www2.lawngateway.com/LawnSolutionsDelaware/" target="_blank" rel="noopener">Client Portal</a>
       </nav>
     </div>
   </header>
@@ -56,9 +69,8 @@
           </p>
         </header>
 
-        <!-- Two-column layout: form + contact details -->
         <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.9fr);gap:28px;align-items:flex-start;">
-          <!-- CONTACT FORM -->
+          <!-- FORM -->
           <form
             class="info-callout"
             action="mailto:MosqutioSolutionsDE@gmail.com?subject=Website%20Contact%20Form"
@@ -89,7 +101,7 @@
             </p>
           </form>
 
-          <!-- CONTACT DETAILS -->
+          <!-- CONTACT INFO -->
           <aside class="info-callout" style="background:var(--surface);">
             <h2 style="margin:0 0 .6rem;">Our contact details</h2>
             <p style="margin:0 0 .4rem;">
@@ -119,15 +131,14 @@
             <a class="btn btn-outline" href="tel:+13028328040">Call (302) 832-8040</a>
 
             <p class="small" style="margin-top:1rem;">
-              Looking for directions? We proudly serve homeowners and businesses across Delaware
-              and nearby Maryland &amp; Pennsylvania communities.
+              We proudly serve homeowners and businesses across Delaware and nearby Maryland &amp; Pennsylvania communities.
             </p>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- CTA band -->
+    <!-- CONTACT BANNER -->
     <section class="cta-band">
       <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
         <p style="margin:0;">Ready to reclaim your yard from mosquitoes and ticks?</p>
@@ -156,6 +167,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="https://www2.lawngateway.com/LawnSolutionsDelaware/" target="_blank" rel="noopener">Client Portal</a></li>
         </ul>
       </nav>
       <div>
