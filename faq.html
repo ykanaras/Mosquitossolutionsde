@@ -1,46 +1,234 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#166534"><meta name="description" content="FAQ for Mosquito Solutions — answers about mosquito & tick control programs and treatments.">
-  <link rel="canonical" href="https://ykanaras.github.io/Mosquitossolutionsde/faq.html">
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#155E3B">
+  <meta name="description" content="Frequently asked questions about Mosquito Solutions mosquito & tick control services in Delaware and surrounding areas.">
   <link rel="icon" href="assets/img/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=5">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="preload" href="assets/css/styles.css?v=7" as="style">
+  <link rel="stylesheet" href="assets/css/styles.css?v=7">
+
   <title>FAQ — Mosquito Solutions</title>
 </head>
+
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <header class="site-header"><div class="container nav">
-    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Mosquito Solutions logo" class="brand-logo"></a>
-    <nav aria-label="Primary"><ul class="nav-list">
-      <li><a href="our-services.html">Services</a></li><li><a href="faq.html" aria-current="page">FAQ</a></li><li><a href="about.html">About</a></li>
-      <li><a class="btn btn-primary" href="contact.html">Get a Quote</a></li></ul></nav>
-    <a class="call-cta" href="tel:+13028328040">Call (302) 832-8040</a></div></header>
 
-  <main id="content" class="container section">
-    <header class="section"><h1>Frequently Asked Questions</h1></header>
+  <!-- HEADER -->
+  <header class="ms-header">
+    <div class="container">
+      <a href="index.html" class="ms-logo-link" aria-label="Mosquito Solutions home">
+        <img class="ms-logo" src="assets/img/logo.png" alt="Mosquito Solutions logo">
+      </a>
+      <h1 class="ms-company-name">Mosquito Solutions</h1>
 
-    <section class="info-callout">
-      <h2>How often do you treat?</h2>
-      <p>Every 3–4 weeks through the season—typically six visits. This cadence helps interrupt the mosquito life cycle and maintains coverage.</p>
+      <nav aria-label="Main" class="ms-nav">
+        <a class="ms-nav__link" href="index.html">Home</a>
+        <a class="ms-nav__link" href="our-services.html">Our Services</a>
+        <a class="ms-nav__link" href="about.html">About Us</a>
+        <a class="ms-nav__link active" href="faq.html">FAQ</a>
+        <a class="ms-nav__link" href="contact.html">Contact</a>
+        <a class="ms-nav__link" aria-disabled="true" href="#">Client Portal</a>
+      </nav>
+    </div>
+  </header>
 
-      <h2>Is it safe for kids and pets?</h2>
-      <p>We use targeted applications and follow label directions. We’ll advise re-entry timing (often after dry time) based on weather and product.</p>
+  <main id="content">
+    <section class="section">
+      <div class="container narrow">
+        <header style="text-align:center;margin-bottom:1.5rem;">
+          <p class="small" style="letter-spacing:.18em;text-transform:uppercase;margin-bottom:.2rem;">
+            Frequently Asked Questions
+          </p>
+          <h1 class="h-serif" style="margin:0 0 .3rem;">Have questions? We’ve got answers.</h1>
+          <p class="small">
+            If you don’t see your question here, please
+            <a href="contact.html">reach out</a> — we’re happy to help.
+          </p>
+        </header>
 
-      <h2>Do I have to sign a long-term contract?</h2>
-      <p>No. Seasonal programs are simple and transparent. You can also request one-time event sprays.</p>
+        <!-- CORE SERVICE FAQS (from screenshot, polished) -->
 
-      <h2>What if it rains?</h2>
-      <p>Weather is factored into our scheduling and product selection. If heavy rain affects a treatment window, we’ll reschedule promptly.</p>
+        <details class="faq-row" open>
+          <summary>How often are the treatments? How many per season?</summary>
+          <p>
+            Our treatments are scheduled every <strong>3–4 weeks</strong> during peak mosquito activity.
+            A typical season includes about <strong>six visits</strong>, from spring through fall, to keep
+            mosquito and tick populations consistently suppressed.
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>Do you service my area?</summary>
+          <p>
+            We currently serve much of northern Delaware and nearby communities, including:
+          </p>
+          <ul style="margin:.4rem 0 0 1.2rem;">
+            <li>New Castle County, Delaware</li>
+            <li>Kent County, Maryland</li>
+            <li>Cecil County, Maryland</li>
+            <li>Chester County, Pennsylvania</li>
+          </ul>
+          <p style="margin-top:.4rem;">
+            Not sure if you’re in our service area? <a href="contact.html">Send us your address</a> and
+            we’ll confirm availability.
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>What do I need to do after the treatment?</summary>
+          <p>
+            You can improve results by removing standing water around your yard — look for clogged gutters,
+            birdbaths, flowerpot saucers, toys, and other water-holding containers. Keeping grass and
+            vegetation trimmed also reduces mosquito hiding spots and helps treatments work more effectively.
+          </p>
+          <p style="margin-top:.4rem;">
+            After we treat, we recommend allowing <strong>at least one hour</strong> for the product to dry
+            before people and pets re-enter treated areas (longer if conditions are very humid or shady).
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>Are these products safe?</summary>
+          <p>
+            We use EPA-registered products that are labeled for residential mosquito and tick control. When
+            applied correctly by trained technicians, they are considered safe for people, pets, and the
+            environment.
+          </p>
+          <p style="margin-top:.4rem;">
+            As a precaution, we ask that people and pets stay indoors until the application is completely dry
+            — typically about an hour.
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>Is this service safe for native insects and pollinators?</summary>
+          <p>
+            Our treatments are designed to target the areas where mosquitoes and ticks rest — such as turf
+            edges, dense shrubs, and ornamental beds. We <strong>avoid spraying blooms</strong> or flowering
+            plants where bees and other pollinators typically forage.
+          </p>
+          <p style="margin-top:.4rem;">
+            While any insecticide can be harmful if a pollinator is directly contacted, we follow best
+            practices to minimize that risk. As beekeepers and pollinator advocates ourselves, we take that
+            responsibility seriously.
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>Do you treat commercial properties and events?</summary>
+          <p>
+            Yes. In addition to residential properties, we provide services for commercial sites and
+            <strong>one-time events</strong> such as weddings, outdoor parties, and corporate gatherings.
+            Contact us with the event date and location so we can hold a spot on the schedule.
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>What other services do you offer?</summary>
+          <p>
+            Through Mosquito Solutions and our partnered brands, we can connect you with additional lawn and
+            outdoor services. If you have specific needs beyond mosquito and tick control, let us know and
+            we’ll point you in the right direction.
+          </p>
+        </details>
+
+        <!-- ADDITIONAL USEFUL FAQS -->
+
+        <details class="faq-row">
+          <summary>How long does a typical visit take?</summary>
+          <p>
+            Most standard residential applications take <strong>20–30 minutes</strong>, depending on the
+            size and complexity of the property. Larger or heavily wooded lots may take a bit longer.
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>Do I need to be home for each treatment?</summary>
+          <p>
+            You do not need to be home as long as we have access to the areas we’re treating. Many of our
+            customers are at work during service. We’ll leave a door hanger or send a notification so you
+            know we were there.
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>What happens if it rains?</summary>
+          <p>
+            Light rain after an application usually does not affect results once the product has dried.
+            If there is heavy rain immediately after a treatment and you feel performance has been reduced,
+            please contact us — we’ll review the situation and make it right.
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>How much does the service cost?</summary>
+          <p>
+            Pricing depends on factors such as property size, landscaping, and whether you’re signing up for
+            a full season or a single event. The best way to get accurate pricing is to request a free quote.
+          </p>
+          <p style="margin-top:.4rem;">
+            You can <a href="contact.html">fill out our quote form</a> or call us at
+            <a href="tel:+13028328040">(302) 832-8040</a> and we’ll provide clear, upfront pricing.
+          </p>
+        </details>
+
+        <details class="faq-row">
+          <summary>Can I pause or cancel service?</summary>
+          <p>
+            Yes. We don’t require long-term contracts. If you need to pause service temporarily or cancel
+            for any reason, just let us know before the next scheduled visit and we’ll update your account.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+        <p style="margin:0;">Still have questions or ready to get started?</p>
+        <div class="svc-cta">
+          <a class="btn btn-dark" href="contact.html">Request a Quote</a>
+          <a class="btn btn-outline" href="tel:+13028328040">Call (302) 832-8040</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-grid">
-    <div><h4>Mosquito Solutions</h4><p>PO Box 992<br>Hockessin, DE 19707</p><p><a href="tel:+13028328040">(302) 832-8040</a><br><a href="mailto:MosqutioSolutionsDE@gmail.com">MosqutioSolutionsDE@gmail.com</a></p></div>
-    <nav aria-label="Footer"><ul><li><a href="index.html">Home</a></li><li><a href="our-services.html">Services</a></li><li><a href="faq.html" aria-current="page">FAQ</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li></ul></nav>
-    <div><p class="small">Serving homeowners and businesses across Delaware.</p><p class="small">&copy; 2025 Mosquito Solutions. All rights reserved.</p></div>
-  </div></footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Mosquito Solutions</h4>
+        <p>PO Box 992<br>Hockessin, DE 19707</p>
+        <p><a href="tel:+13028328040">(302) 832-8040</a><br>
+        <a href="mailto:MosqutioSolutionsDE@gmail.com">MosqutioSolutionsDE@gmail.com</a></p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-services.html">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="small">Serving homeowners and businesses across Delaware.</p>
+        <p class="small">&copy; 2025 Mosquito Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
