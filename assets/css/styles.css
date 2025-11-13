@@ -1,5 +1,5 @@
-//* =========================================================
-   Mosquito Solutions — styles.css  (v7)
+/* =========================================================
+   Mosquito Solutions — styles.css  (v8)
    - Evergreen / classic look with centered logo + slim nav
    - Mobile-friendly: hamburger menu, stacked layouts
    - Shared components for all pages
@@ -227,6 +227,16 @@ a:hover{text-decoration:underline}
 .info-callout button{margin-top:.6rem}
 
 /* =========================================================
+   CONTACT PAGE LAYOUT
+   ========================================================= */
+.contact-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.4fr) minmax(0,.9fr);
+  gap:28px;
+  align-items:flex-start;
+}
+
+/* =========================================================
    SERVICES PAGE
    ========================================================= */
 .svc-hero{padding:22px 0 12px}
@@ -262,6 +272,25 @@ a:hover{text-decoration:underline}
 }
 .cta-band p{margin:.2rem 0 0}
 .svc-cta{display:flex;gap:.6rem;margin-top:.4rem;flex-wrap:wrap}
+
+/* Make buttons pop inside dark CTA band */
+.cta-band .btn-dark{
+  background:#ffffff;
+  color:#0f3a1f;
+  border:none;
+  box-shadow:0 10px 20px rgba(0,0,0,.35);
+}
+.cta-band .btn-dark:hover{
+  background:#f9fafb;
+}
+.cta-band .btn-outline{
+  border-color:#facc15;
+  color:#facc15;
+  background:transparent;
+}
+.cta-band .btn-outline:hover{
+  background:rgba(250,204,21,.1);
+}
 
 /* =========================================================
    FAQ
@@ -305,6 +334,32 @@ a:hover{text-decoration:underline}
 .footer-grid ul{list-style:none;padding:0;margin:0}
 .footer-grid li{margin-bottom:.4rem}
 .footer-grid h4{margin-top:0}
+
+/* =========================================================
+   MOBILE STICKY QUOTE BANNER
+   ========================================================= */
+.ms-quote-banner{
+  display:none; /* hidden on desktop */
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#EA580C; /* bright orange for strong contrast */
+  color:#fff;
+  text-align:center;
+  padding:.9rem 1rem;
+  font-size:1.05rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  z-index:9999;
+  box-shadow:0 -4px 16px rgba(0,0,0,.35);
+  text-decoration:none;
+}
+.ms-quote-banner:hover{
+  background:#C2410C;
+  text-decoration:none;
+}
 
 /* =========================================================
    RESPONSIVE
@@ -374,6 +429,21 @@ a:hover{text-decoration:underline}
   .ms-intro p{
     text-align:left;
   }
+
+  /* stack contact form + contact info */
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* make room for sticky quote banner */
+  body{
+    padding-bottom:70px;
+  }
+
+  /* show sticky banner only on mobile */
+  .ms-quote-banner{
+    display:block;
+  }
 }
 
 /* Extra small screens */
@@ -398,42 +468,9 @@ a:hover{text-decoration:underline}
   .card,.info-callout,.faq-row{border-color:#1E2F27}
   .site-footer{background:#0E2E1D}
   .ms-reviews__overlay{background:rgba(10,25,16,.65)}
-}
-/* =========================================================
-   MOBILE STICKY QUOTE BANNER
-   ========================================================= */
 
-.ms-quote-banner{
-  display:none; /* hidden on desktop */
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  background:linear-gradient(90deg, var(--green-700), var(--green));
-  color:#fff;
-  text-align:center;
-  padding:1rem;
-  font-size:1.1rem;
-  font-weight:700;
-  letter-spacing:.03em;
-  z-index:9999;
-  box-shadow:0 -4px 12px rgba(0,0,0,.25);
-  text-decoration:none;
-}
-
-.ms-quote-banner:hover{
-  background:linear-gradient(90deg, var(--green-800), var(--green-600));
-  text-decoration:none;
-}
-
-/* Show ONLY on mobile */
-@media (max-width: 768px){
   .ms-quote-banner{
-    display:block;
-  }
-  
-  /* Add bottom padding so content doesn't get covered */
-  body{
-    padding-bottom:70px;
+    background:#FBBF24;
+    color:#0F172A;
   }
 }
