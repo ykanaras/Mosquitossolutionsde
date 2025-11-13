@@ -1,9 +1,10 @@
 /* =========================================================
-   Mosquito Solutions — styles.css  (v6)
+   Mosquito Solutions — styles.css  (v7)
    - Evergreen / classic look with centered logo + slim nav
    - Index layout: photo left + promo card right, yellow apiary band,
      grass reviews band
    - Re-usable components for other pages (cards, info blocks, forms)
+   - Services page: overview grid, checklist, steps, pricing, mini-FAQ
    ========================================================= */
 
 /* ---------- Design tokens ---------- */
@@ -190,7 +191,12 @@ a:hover{text-decoration:underline}
   .site-footer{background:#0E2E1D}
   .ms-reviews__overlay{background:rgba(10,25,16,.65)}
 }
-/* ===== Services page ===== */
+
+/* =========================================================
+   SERVICES PAGE
+   ========================================================= */
+
+/* Hero */
 .svc-hero{padding:22px 0 12px}
 .svc-hero__frame{
   max-width:1180px;margin:0 auto;border-radius:14px;overflow:hidden;
@@ -200,28 +206,85 @@ a:hover{text-decoration:underline}
 .svc-hero__headline{margin-top:16px;text-align:center}
 .svc-hero__headline p{color:#3f4e44}
 
-/* “What is the service?” split block */
+/* Overview */
+.svc-overview{
+  display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start
+}
+.svc-eyebrow{margin:0 0 .3rem;font-weight:700;letter-spacing:.02em}
+
+/* What we treat — checklist */
+.checklist{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:.65rem 1.25rem;margin-top:.6rem;padding-left:0;list-style:none
+}
+.checklist li{
+  position:relative;padding-left:1.6rem
+}
+.checklist li::before{
+  content:"✓"; position:absolute; left:0; top:0; font-weight:800; color:var(--green)
+}
+
+/* How it works — steps */
+.steps{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1rem;margin-top:.6rem
+}
+.steps li{
+  list-style:none;background:var(--surface);border:1px solid #E4EBE5;
+  border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)
+}
+.steps h3{margin:.1rem 0 .35rem}
+
+/* Program / pricing helpers */
+.price-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:.8rem;margin-top:.6rem
+}
+.price-card{
+  border:1px dashed #cfe0d6;border-radius:12px;padding:.9rem 1rem;background:var(--surface)
+}
+.price-name{font-weight:700;margin-bottom:.15rem}
+.price-note{color:#516158}
+
+/* Compact FAQ */
+.faq-row{
+  border:1px solid #E4EBE5;border-radius:12px;padding:.8rem 1rem;margin:.6rem 0;background:var(--surface)
+}
+.faq-row summary{font-weight:600;cursor:pointer}
+.faq-row[open]{box-shadow:var(--shadow)}
+.faq-row p{margin:.6rem 0 0}
+
+/* CTA band reuse */
+.cta-band{
+  background:linear-gradient(90deg,#0f3a1f,#136d3b);color:#eafff2;padding:1rem 0;
+  border-top:1px solid #0f3a1f;border-bottom:1px solid #0f3a1f
+}
+.cta-band p{margin:.2rem 0 0}
+.svc-cta{display:flex;gap:.6rem;margin-top:.4rem;flex-wrap:wrap}
+
+/* “What is the service?” split + longform columns (if used elsewhere) */
 .svc-split{
   display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start
 }
 .svc-split__title h2{margin:.2rem 0 0}
 .svc-center{font-size:1.06rem;text-align:center;color:#3f4e44}
-
-/* Two text columns (like your current long form section) */
 .svc-columns{
   display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:.6rem
 }
 .svc-columns h3{margin:0 0 .35rem}
 .svc-columns p{margin:0;color:#39483e}
 
-/* CTA band reuse */
-.cta-band{background:linear-gradient(90deg,#0f3a1f,#136d3b);color:#eafff2;padding:1rem 0;border-top:1px solid #0f3a1f;border-bottom:1px solid #0f3a1f}
-.cta-band p{margin:.2rem 0 0}
-.svc-cta{display:flex;gap:.6rem;margin-top:.4rem;flex-wrap:wrap}
-
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width:980px){
+  .svc-overview{grid-template-columns:1fr}
   .svc-split{grid-template-columns:1fr}
   .svc-columns{grid-template-columns:1fr}
 }
 
+/* Dark-scheme tuning for Services */
+@media (prefers-color-scheme: dark){
+  .svc-hero__headline p{color:#cfe3d7}
+  .faq-row{border-color:#1E2F27}
+  .price-card{border-color:#274034}
+  .checklist li::before{color:#39c57c}
+}
