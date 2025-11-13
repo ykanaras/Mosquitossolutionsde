@@ -2,47 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#155E3B">
-  <meta name="description" content="Mosquito Solutions — Mosquito, tick & flea control in Northern Delaware.">
+  <meta name="description" content="Professional mosquito and tick control in Delaware. Seasonal protection with scheduled treatments every 3–4 weeks. Call (302) 832-8040.">
+  <meta name="keywords" content="mosquito control Delaware, tick control Delaware, mosquito treatment, Hockessin, Newark, Northern Delaware">
+  <meta name="author" content="Mosquito Solutions">
+  <link rel="canonical" href="https://mosquitosolutionsde.com">
   <link rel="icon" href="assets/img/favicon.ico">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=6">
-  <title>Mosquito Solutions</title>
+  <!-- CSS -->
+  <link rel="preload" href="assets/css/styles.css?v=7" as="style">
+  <link rel="stylesheet" href="assets/css/styles.css?v=7">
+
+  <!-- JS (simple mobile menu if you add it later) -->
+  <script defer src="assets/js/main.js"></script>
+
+  <title>Mosquito Solutions — Mosquito & Tick Control in Northern Delaware</title>
+
+  <!-- LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mosquito Solutions",
+    "image": "assets/img/og-placeholder.jpg",
+    "telephone": "(302) 832-8040",
+    "email": "MosqutioSolutionsDE@gmail.com",
+    "url": "https://mosquitosolutionsde.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "PO Box 992",
+      "addressLocality": "Hockessin",
+      "addressRegion": "DE",
+      "postalCode": "19707",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Delaware"],
+    "priceRange": "$$"
+  }
+  </script>
 </head>
+
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
+  <!-- HEADER -->
   <header class="ms-header">
     <div class="container">
       <a href="index.html" class="ms-logo-link" aria-label="Mosquito Solutions home">
         <img class="ms-logo" src="assets/img/logo.png" alt="Mosquito Solutions logo">
       </a>
+      <!-- Company name across top (fills the empty space nicely) -->
+      <h1 class="ms-company-name">Mosquito Solutions</h1>
+
       <nav aria-label="Main" class="ms-nav">
         <a class="ms-nav__link active" href="index.html">Home</a>
         <a class="ms-nav__link" href="our-services.html">Our Services</a>
         <a class="ms-nav__link" href="about.html">About Us</a>
         <a class="ms-nav__link" href="faq.html">FAQ</a>
         <a class="ms-nav__link" href="contact.html">Contact</a>
-        <a class="ms-nav__link" href="#" aria-disabled="true">Client Portal</a>
+        <a class="ms-nav__link" aria-disabled="true" href="#">Client Portal</a>
       </nav>
     </div>
   </header>
 
   <main id="content">
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section class="ms-hero">
       <div class="container ms-hero__grid">
-        <figure class="ms-hero__photo">
-          <img src="assets/img/hero-yard.jpg" alt="Technician treating shrubs in a yard">
+        <figure class="ms-hero__photo" aria-hidden="true">
+          <!-- Use your best landscape photo here -->
+          <img src="assets/img/hero.jpg" alt="">
         </figure>
-        <aside class="ms-hero__card">
+
+        <aside class="ms-hero__card" aria-label="Highlight">
           <h1>No more ending the night early – enjoy the outdoors</h1>
-          <p class="ms-hero__sub">Offering mosquito, flea & tick solutions for your property.</p>
+          <p class="ms-hero__sub">Offering mosquito, flea & tick solutions for your property</p>
           <div class="ms-hero__actions">
             <a class="btn btn-dark" href="tel:+13028328040">Call Now</a>
             <a class="btn btn-outline" href="our-services.html">Our Services</a>
@@ -51,28 +92,51 @@
       </div>
     </section>
 
-    <!-- Intro Block -->
+    <!-- INTRO -->
     <section class="ms-intro">
       <div class="container narrow">
         <h2 class="h-serif">Enjoy your outdoor spaces again!</h2>
-        <p>Our mosquito control program is designed to provide consistent protection throughout the season. With six visits during peak mosquito activity, we ensure your yard stays comfortable and pest free.</p>
+        <p>
+          Our mosquito control program is designed to provide consistent protection throughout the season.
+          With six visits during peak mosquito activity, we ensure your yard stays comfortable and pest free.
+        </p>
       </div>
     </section>
 
-    <!-- Apiary Yellow Band -->
+    <!-- WHY MOSQUITOES MATTER (longer blip) -->
+    <section class="section">
+      <div class="container narrow">
+        <div class="info-callout">
+          <h3 class="h-serif">Why mosquitoes matter</h3>
+          <p>
+            Mosquitoes aren’t just a nuisance — they can spread illnesses such as West Nile virus and Eastern Equine
+            Encephalitis in the U.S. Reducing populations around your home lowers bite exposure and helps protect your
+            family and pets. Our targeted applications focus on the shaded, moist areas where mosquitoes rest during the
+            day so evenings are calmer and more enjoyable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APIARY (yellow band) -->
     <section class="ms-apiary">
       <div class="container ms-apiary__grid">
         <div class="ms-apiary__copy">
           <h3>We operate our own apiary!</h3>
-          <p>With our own apiary, we experience firsthand the rewards of harvesting honey and caring for bees. This gives us a deep appreciation for the vital role insects play in a healthy ecosystem. That’s why every treatment we apply is done safely and responsibly, using the lowest effective rates to avoid harming beneficial insects. Protecting pollinators is always a priority!</p>
+          <p>
+            Running an apiary gives us firsthand appreciation for pollinators and healthy ecosystems.
+            We apply EPA-registered products at the lowest effective rates and follow best practices to avoid harming
+            beneficial insects — protecting pollinators is always a priority.
+          </p>
         </div>
         <figure class="ms-apiary__photo" aria-hidden="true">
+          <!-- Friendly bee/box photo -->
           <img src="assets/img/apiary.jpg" alt="">
         </figure>
       </div>
     </section>
 
-    <!-- Reviews Grass Band -->
+    <!-- REVIEWS BAND (grass background) -->
     <section class="ms-reviews">
       <div class="ms-reviews__overlay">
         <div class="container narrow">
@@ -83,17 +147,18 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <h4>Mosquito Solutions</h4>
         <p>PO Box 992<br>Hockessin, DE 19707</p>
         <p><a href="tel:+13028328040">(302) 832-8040</a><br>
-           <a href="mailto:MosqutioSolutionsDE@gmail.com">MosqutioSolutionsDE@gmail.com</a></p>
+        <a href="mailto:MosqutioSolutionsDE@gmail.com">MosqutioSolutionsDE@gmail.com</a></p>
       </div>
       <nav aria-label="Footer">
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="our-services.html">Services</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About</a></li>
