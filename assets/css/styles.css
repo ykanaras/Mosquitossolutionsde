@@ -63,6 +63,15 @@ a:hover{text-decoration:underline}
 .ms-header{padding:28px 0 6px;border-bottom:1px solid #ECF1EA}
 .ms-logo{height:76px;width:auto;margin:0 auto;display:block}
 .ms-logo-link{display:inline-block}
+.ms-company-name{
+  text-align:center;
+  font-family:"Playfair Display", Georgia, serif;
+  font-size:1.6rem;
+  font-weight:700;
+  color:var(--green);
+  letter-spacing:.02em;
+  margin-top:4px;
+}
 .ms-nav{
   margin-top:10px;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap
 }
@@ -186,6 +195,7 @@ a:hover{text-decoration:underline}
     --ring:#2BA87E
   }
   .ms-header{border-bottom:1px solid #1E2F27}
+  .ms-company-name{color:#39c57c}
   .ms-nav__link:hover{background:#15241c}
   .card,.info-callout{border-color:#1E2F27}
   .site-footer{background:#0E2E1D}
@@ -262,15 +272,11 @@ a:hover{text-decoration:underline}
 .cta-band p{margin:.2rem 0 0}
 .svc-cta{display:flex;gap:.6rem;margin-top:.4rem;flex-wrap:wrap}
 
-/* “What is the service?” split + longform columns (if used elsewhere) */
-.svc-split{
-  display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start
-}
+/* Split/columns helpers (optional text sections) */
+.svc-split{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start}
 .svc-split__title h2{margin:.2rem 0 0}
 .svc-center{font-size:1.06rem;text-align:center;color:#3f4e44}
-.svc-columns{
-  display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:.6rem
-}
+.svc-columns{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:.6rem}
 .svc-columns h3{margin:0 0 .35rem}
 .svc-columns p{margin:0;color:#39483e}
 
