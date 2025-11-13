@@ -3,50 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="color-scheme" content="light">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a4">
-  <meta name="description" content="Professional mosquito and tick control in Delaware. Seasonal protection with scheduled treatments so you can enjoy your yard again. Call (302) 832-8040.">
-  <meta name="keywords" content="mosquito control Delaware, tick control Delaware, mosquito treatment, Hockessin, Newark, Northern Delaware">
+  <meta name="description" content="Mosquito & tick control in Northern Delaware. Professional, scheduled treatments every 3–4 weeks so you can enjoy your yard again. Call (302) 832-8040.">
+  <meta name="keywords" content="mosquito control Delaware, tick control Delaware, mosquito treatment Hockessin, Newark Delaware">
   <meta name="author" content="Mosquito Solutions">
 
-  <!-- Use your GitHub Pages URL -->
+  <!-- Canonical: your GitHub Pages URL (or custom domain later) -->
   <link rel="canonical" href="https://ykanaras.github.io/Mosquitossolutionsde/">
 
-  <meta property="og:site_name" content="Mosquito Solutions" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/og-placeholder.jpg" />
-  <meta property="og:locale" content="en_US" />
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Mosquito Solutions">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-placeholder.jpg">
+  <meta property="og:locale" content="en_US">
 
+  <!-- Favicons / Fonts -->
   <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="preload" href="assets/css/styles.css" as="style">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/main.js"></script>
 
   <title>Mosquito Solutions — Mosquito & Tick Control in Northern Delaware</title>
 
+  <!-- LocalBusiness schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Mosquito Solutions",
-    "image": "assets/img/og-placeholder.jpg",
-    "telephone": "(302) 832-8040",
-    "email": "MosqutioSolutionsDE@gmail.com",
-    "url": "https://ykanaras.github.io/Mosquitossolutionsde/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "PO Box 992",
-      "addressLocality": "Hockessin",
-      "addressRegion": "DE",
-      "postalCode": "19707",
-      "addressCountry": "US"
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Mosquito Solutions",
+    "image":"assets/img/og-placeholder.jpg",
+    "telephone":"(302) 832-8040",
+    "email":"MosqutioSolutionsDE@gmail.com",
+    "url":"https://ykanaras.github.io/Mosquitossolutionsde/",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"PO Box 992",
+      "addressLocality":"Hockessin",
+      "addressRegion":"DE",
+      "postalCode":"19707",
+      "addressCountry":"US"
     },
-    "areaServed": ["Delaware"],
-    "priceRange": "$$",
-    "sameAs": []
+    "areaServed":["Delaware"],
+    "priceRange":"$$"
   }
   </script>
 </head>
@@ -54,16 +57,16 @@
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
+  <!-- Header -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">🦟</span> Mosquito Solutions</a>
-      <button class="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">☰</button>
       <nav id="primary-nav" aria-label="Primary">
         <ul class="nav-list">
           <li><a href="our-services.html">Services</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" class="btn">Get a Quote</a></li>
+          <li><a class="btn btn-primary" href="contact.html">Get a Quote</a></li>
         </ul>
       </nav>
       <a class="call-cta" href="tel:+13028328040">Call (302) 832-8040</a>
@@ -71,11 +74,12 @@
   </header>
 
   <main id="content">
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-copy">
           <h1>Enjoy Your Yard Again</h1>
-          <p>Season-long mosquito and tick control with scheduled treatments every 3–4 weeks. Professional service from a local Delaware team.</p>
+          <p class="lead">Professional mosquito and tick control with scheduled treatments every <strong>3–4 weeks</strong>. Local Delaware team, licensed & insured.</p>
           <div class="cta-group">
             <a class="btn btn-primary" href="contact.html">Request a Quote</a>
             <a class="btn" href="our-services.html">How it works</a>
@@ -83,7 +87,7 @@
           <ul class="trust-badges" aria-label="Service highlights">
             <li>No long-term contracts</li>
             <li>Kid & pet considerate after dry time</li>
-            <li>Licensed & insured</li>
+            <li>Transparent, simple pricing</li>
           </ul>
         </div>
         <figure class="hero-art" aria-hidden="true">
@@ -92,16 +96,25 @@
       </div>
     </section>
 
-    <section class="features container">
-      <h2>What you get</h2>
+    <!-- Why mosquitoes are dangerous -->
+    <section class="container section">
+      <div class="info-callout shadow round">
+        <h2 class="section-title">Why mosquitoes matter</h2>
+        <p>Mosquitoes aren’t just a nuisance—they can spread illnesses such as West Nile virus and Eastern Equine Encephalitis in the U.S. Reducing mosquito populations around your home lowers bite exposure and helps protect your family and pets.</p>
+      </div>
+    </section>
+
+    <!-- What you get -->
+    <section class="features container section">
+      <h2 class="section-title">What you get</h2>
       <div class="cards">
         <article class="card">
           <h3>Scheduled Protection</h3>
-          <p>Six visits during peak season to keep populations down from spring through fall.</p>
+          <p>Six visits during peak season keep populations down from spring through fall.</p>
         </article>
         <article class="card">
           <h3>Targeted Treatment</h3>
-          <p>We focus on shrubs, shaded areas, and other common resting spots around your property.</p>
+          <p>We treat shrubs, shaded areas, and other common resting spots around your property.</p>
         </article>
         <article class="card">
           <h3>Transparent Pricing</h3>
@@ -110,18 +123,21 @@
       </div>
     </section>
 
+    <!-- CTA band -->
     <section class="cta-band">
       <div class="container">
         <p><strong>Questions?</strong> Check our <a href="faq.html">FAQ</a> or call <a href="tel:+13028328040">(302) 832-8040</a>.</p>
       </div>
     </section>
 
-    <section class="container">
-      <h2>Areas We Serve</h2>
-      <p>Based in Hockessin, we serve homeowners and businesses across Delaware.</p>
+    <!-- Areas -->
+    <section class="container section">
+      <h2 class="section-title">Areas We Serve</h2>
+      <p>Based in Hockessin, we serve homeowners and businesses across Northern Delaware.</p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -142,7 +158,7 @@
       </nav>
       <div>
         <p class="small">Serving homeowners and businesses across Delaware.</p>
-        <p class="small">&copy; 2025 Mosquito Solutions. All rights reserved.</p>
+        <p class="small">&copy; <span data-year>2025</span> Mosquito Solutions. All rights reserved.</p>
       </div>
     </div>
   </footer>
