@@ -1,53 +1,168 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#166534"><meta name="description" content="Get a quote from Mosquito Solutions — professional mosquito & tick control in Northern Delaware.">
-  <link rel="canonical" href="https://ykanaras.github.io/Mosquitossolutionsde/contact.html">
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#155E3B">
+  <meta name="description" content="Contact Mosquito Solutions to request a quote or ask questions about mosquito and tick control services.">
   <link rel="icon" href="assets/img/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=5">
-  <title>Contact — Mosquito Solutions</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="preload" href="assets/css/styles.css?v=7" as="style">
+  <link rel="stylesheet" href="assets/css/styles.css?v=7">
+
+  <title>Contact Us — Mosquito Solutions</title>
 </head>
+
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <header class="site-header"><div class="container nav">
-    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Mosquito Solutions logo" class="brand-logo"></a>
-    <nav aria-label="Primary"><ul class="nav-list">
-      <li><a href="our-services.html">Services</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">About</a></li>
-      <li><a class="btn btn-primary" href="contact.html" aria-current="page">Get a Quote</a></li></ul></nav>
-    <a class="call-cta" href="tel:+13028328040">Call (302) 832-8040</a></div></header>
 
-  <main id="content" class="container section">
-    <header class="section"><h1>Request a Quote</h1><p class="lead">Tell us a little about your property and we’ll get back to you promptly.</p></header>
+  <!-- HEADER -->
+  <header class="ms-header">
+    <div class="container">
+      <a href="index.html" class="ms-logo-link" aria-label="Mosquito Solutions home">
+        <img class="ms-logo" src="assets/img/logo.png" alt="Mosquito Solutions logo">
+      </a>
+      <h1 class="ms-company-name">Mosquito Solutions</h1>
 
-    <section class="card">
-      <!-- Replace Formspree ID with yours if using -->
-      <form class="info-callout" method="POST" action="https://formspree.io/f/your-id-here">
-        <label>Full Name <input name="name" required></label><br>
-        <label>Phone <input name="phone" required></label><br>
-        <label>Email <input type="email" name="email" required></label><br>
-        <label>Address (City/ZIP) <input name="location"></label><br>
-        <label>How did you hear about us? <input name="source"></label><br>
-        <label>Message <textarea name="message" rows="5" placeholder="Tell us about your yard and goals"></textarea></label><br>
-        <button class="btn btn-primary" type="submit">Send</button>
-        <p class="small" style="margin-top:.5rem">Prefer email? <a class="btn" href="mailto:MosqutioSolutionsDE@gmail.com?subject=Quote%20Request">Email us</a></p>
-      </form>
+      <nav aria-label="Main" class="ms-nav">
+        <a class="ms-nav__link" href="index.html">Home</a>
+        <a class="ms-nav__link" href="our-services.html">Our Services</a>
+        <a class="ms-nav__link" href="about.html">About Us</a>
+        <a class="ms-nav__link" href="faq.html">FAQ</a>
+        <a class="ms-nav__link active" href="contact.html">Contact</a>
+        <a class="ms-nav__link" aria-disabled="true" href="#">Client Portal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section">
+      <div class="container narrow">
+        <header style="margin-bottom:1.75rem;">
+          <p class="small" style="letter-spacing:.18em;text-transform:uppercase;margin-bottom:.2rem;">
+            Get in touch
+          </p>
+          <h1 class="h-serif" style="margin:0 0 .3rem;">Contact Mosquito Solutions</h1>
+          <p class="small">
+            Have a question or ready for a quote? Send us a message using the form below
+            and we’ll respond as soon as possible.
+          </p>
+        </header>
+
+        <!-- Two-column layout: form + contact details -->
+        <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.9fr);gap:28px;align-items:flex-start;">
+          <!-- CONTACT FORM -->
+          <form
+            class="info-callout"
+            action="mailto:MosqutioSolutionsDE@gmail.com?subject=Website%20Contact%20Form"
+            method="POST"
+            enctype="text/plain"
+          >
+            <h2 style="margin:0 0 .6rem;">Send us a message</h2>
+
+            <label for="name">Name*</label>
+            <input id="name" name="Name" required>
+
+            <label for="phone">Phone number*</label>
+            <input id="phone" name="Phone" required>
+
+            <label for="email">Email*</label>
+            <input id="email" name="Email" type="email" required>
+
+            <label for="message">Message*</label>
+            <textarea id="message" name="Message" rows="5" required></textarea>
+
+            <label for="source">How did you hear about us?</label>
+            <input id="source" name="How did you hear about us?">
+
+            <button class="btn btn-dark" type="submit" style="margin-top:1rem;">Send</button>
+            <p class="small" style="margin-top:.5rem;">
+              By clicking “Send,” your email program may open with this information pre-filled
+              to be delivered to <strong>MosqutioSolutionsDE@gmail.com</strong>.
+            </p>
+          </form>
+
+          <!-- CONTACT DETAILS -->
+          <aside class="info-callout" style="background:var(--surface);">
+            <h2 style="margin:0 0 .6rem;">Our contact details</h2>
+            <p style="margin:0 0 .4rem;">
+              <strong>Mosquito Solutions</strong><br>
+              PO Box 992<br>
+              Hockessin, DE 19707
+            </p>
+
+            <p style="margin:0 0 .4rem;">
+              <strong>Phone:</strong> <a href="tel:+13028328040">(302) 832-8040</a><br>
+              <strong>Email:</strong> <a href="mailto:MosqutioSolutionsDE@gmail.com">MosqutioSolutionsDE@gmail.com</a>
+            </p>
+
+            <p class="small" style="margin-top:.6rem;">
+              Service hours vary seasonally, but we’re generally available on weekdays for
+              treatments and consultations. If we miss your call, leave a message and we’ll
+              get back to you promptly.
+            </p>
+
+            <hr style="border:none;border-top:1px solid #E4EBE5;margin:1rem 0;">
+
+            <h3 style="margin:0 0 .4rem;font-size:1rem;">Prefer to call?</h3>
+            <p class="small" style="margin:0 0 .6rem;">
+              If your matter is urgent or you’d rather talk through options, give us a call and
+              we’ll walk you through the best program for your property.
+            </p>
+            <a class="btn btn-outline" href="tel:+13028328040">Call (302) 832-8040</a>
+
+            <p class="small" style="margin-top:1rem;">
+              Looking for directions? We proudly serve homeowners and businesses across Delaware
+              and nearby Maryland &amp; Pennsylvania communities.
+            </p>
+          </aside>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Our Contact Info</h2>
-      <p>Mosquito Solutions<br>PO Box 992<br>Hockessin, DE 19707</p>
-      <p><a href="tel:+13028328040">(302) 832-8040</a><br><a href="mailto:MosqutioSolutionsDE@gmail.com">MosqutioSolutionsDE@gmail.com</a></p>
-      <p><a class="btn" href="https://maps.google.com/?q=Hockessin%2C%20DE" target="_blank" rel="noopener">Open in Google Maps</a></p>
+    <!-- CTA band -->
+    <section class="cta-band">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+        <p style="margin:0;">Ready to reclaim your yard from mosquitoes and ticks?</p>
+        <div class="svc-cta">
+          <a class="btn btn-dark" href="tel:+13028328040">Call Now</a>
+          <a class="btn btn-outline" href="our-services.html">View Our Services</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-grid">
-    <div><h4>Mosquito Solutions</h4><p>PO Box 992<br>Hockessin, DE 19707</p><p><a href="tel:+13028328040">(302) 832-8040</a><br><a href="mailto:MosqutioSolutionsDE@gmail.com">MosqutioSolutionsDE@gmail.com</a></p></div>
-    <nav aria-label="Footer"><ul><li><a href="index.html">Home</a></li><li><a href="our-services.html">Services</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li><a href="privacy.html">Privacy</a></li></ul></nav>
-    <div><p class="small">Serving homeowners and businesses across Delaware.</p><p class="small">&copy; 2025 Mosquito Solutions. All rights reserved.</p></div>
-  </div></footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Mosquito Solutions</h4>
+        <p>PO Box 992<br>Hockessin, DE 19707</p>
+        <p><a href="tel:+13028328040">(302) 832-8040</a><br>
+        <a href="mailto:MosqutioSolutionsDE@gmail.com">MosqutioSolutionsDE@gmail.com</a></p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-services.html">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="small">Serving homeowners and businesses across Delaware.</p>
+        <p class="small">&copy; 2025 Mosquito Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
