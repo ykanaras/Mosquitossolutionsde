@@ -1,0 +1,111 @@
+/* Modern, friendly brand theme */
+:root{
+  --bg:#f9fbfa;
+  --surface:#ffffff;
+  --ink:#0f1b14;
+  --muted:#5a6c5f;
+  --brand:#18a05e;
+  --brand-ink:#0e6b3d;
+  --ring:#9fe6c0;
+  --card:#f2f7f4;
+  --shadow: 0 10px 30px rgba(0,0,0,.06);
+  --radius: 16px;
+}
+/* Base */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,"Helvetica Neue", Arial}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1140px;margin:0 auto;padding:1rem 1.25rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.78rem 1.1rem;border:1px solid #d6e9dd;border-radius:calc(var(--radius) - 4px);background:#fff;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+.btn-primary:hover{box-shadow:0 12px 30px rgba(24,160,94,.35)}
+.badge{display:inline-block;background:#e9f8f0;color:var(--brand-ink);padding:.25rem .6rem;border-radius:999px;font-weight:600;font-size:.85rem}
+/* Header */
+.site-header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #e6eee9;z-index:50}
+.nav{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.brand{font-weight:800;display:flex;align-items:center;gap:.6rem;font-size:1.15rem}
+.brand-mark{font-size:1.25rem}
+.nav-list{display:flex;gap:.3rem;list-style:none;margin:0;padding:0}
+.nav-list a{padding:.55rem .8rem;border-radius:12px}
+.call-cta{margin-left:auto;margin-right:0;font-weight:700}
+/* Mobile menu */
+.hamburger{display:none;background:#fff;border:1px solid #dce9e1;border-radius:12px;padding:.5rem .7rem;box-shadow:var(--shadow)}
+#primary-nav{display:block}
+@media (max-width:900px){
+  .hamburger{display:inline-flex}
+  #primary-nav{display:none;position:absolute;left:0;right:0;top:64px;background:#fff;border-bottom:1px solid #e6eee9}
+  #primary-nav.open{display:block}
+  .nav-list{flex-direction:column;padding:1rem}
+  .call-cta{display:none}
+}
+/* Hero */
+.hero{
+  position:relative;
+  background:radial-gradient(1200px 600px at 80% -10%, #c8f3dd 0%, transparent 60%), linear-gradient(180deg,#f1fbf5,#fff);
+  overflow:hidden;
+  border-bottom:1px solid #e6eee9;
+}
+.hero:before{
+  content:""; position:absolute; inset:-10% -20% auto -20%;
+  height:380px; background:conic-gradient(from 180deg at 60% 40%, #b1f0d3, #f1fbf5, #c6ffe0, #b1f0d3);
+  filter:blur(40px); opacity:.45; pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;min-height:520px}
+.hero h1{font-size:clamp(2rem, 3.5vw, 3rem);line-height:1.15;margin:0 0 .5rem}
+.hero p{font-size:1.05rem;color:var(--muted)}
+.cta-group{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:.75rem}
+.trust-badges{display:flex;gap:.5rem;list-style:none;padding:0;margin:1rem 0 0 0;color:var(--muted);flex-wrap:wrap}
+.trust-badges li{background:var(--surface);border:1px solid #e7f3eb;padding:.4rem .6rem;border-radius:999px;box-shadow:var(--shadow)}
+/* Sections */
+.section{padding:2.5rem 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--surface);padding:1rem 1.1rem;border-radius:var(--radius);border:1px solid #e6eee9;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.about-art{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.cta-band{background:linear-gradient(90deg,#0f3a1f,#136d3b);color:#eafff2;padding:.9rem 0}
+.cta-band a{color:#fff;text-decoration:underline}
+.page-header h1{margin-bottom:.4rem}
+.page-header p{color:var(--muted)}
+.faq{border:1px solid #e6eee9;border-radius:var(--radius);padding:.75rem 1rem;margin:.65rem 0;background:var(--surface);box-shadow:var(--shadow)}
+.faq summary{list-style:none;display:flex;align-items:center;gap:.6rem;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary h3{display:inline;margin:.3rem 0}
+.faq[open]{border-color:var(--ring);box-shadow:0 10px 30px rgba(18,130,78,.08)}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;background:var(--surface);padding:1rem;border-radius:var(--radius);border:1px solid #e6eee9;box-shadow:var(--shadow)}
+.contact-form label{display:flex;flex-direction:column;font-weight:600}
+.contact-form input,.contact-form textarea{padding:.7rem;border-radius:.7rem;border:1px solid #cfe7d8;outline:2px solid transparent;outline-offset:2px;transition:outline-color .2s}
+.contact-form input:focus,.contact-form textarea:focus{outline-color:var(--ring)}
+.contact-form button{grid-column:1/-1}
+.section-title{display:flex;align-items:center;gap:.6rem}
+.section-title .badge{margin-left:.3rem}
+.site-footer{background:#081b10;color:#d9ffe9;margin-top:3rem;padding:2rem 0;border-top:1px solid #0d2f1a}
+.footer-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:1.5rem}
+.small{font-size:.92rem;color:#b7d9c5}
+.footer-grid a{color:#c6ffe0}
+/* Utilities */
+.shadow{box-shadow:var(--shadow)}
+.round{border-radius:var(--radius)}
+.emph{font-weight:700;color:var(--brand-ink)}
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;min-height:unset}
+  .footer-grid{grid-template-columns:1fr}
+  .contact-form{grid-template-columns:1fr}
+}
+/* Motion sensitivity */
+@media (prefers-reduced-motion: reduce) {
+  .btn{transition:none}
+}
+/* Dark-ish mode */
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0c1310;--surface:#0f1713;--ink:#e9f4ee;--muted:#b4c5b8;--card:#112018;--brand:#39c57c;--brand-ink:#a6f0c7;--ring:#1c7a4a}
+  .site-header{background:rgba(16,24,20,.8);border-bottom:1px solid #203428}
+  .faq{border-color:#1a2a21}
+  .card{border-color:#1a2a21}
+  .contact-form{border-color:#1a2a21}
+  .cta-band{background:linear-gradient(90deg,#0b301a,#165e34);}
+}
