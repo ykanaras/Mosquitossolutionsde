@@ -399,3 +399,41 @@ a:hover{text-decoration:underline}
   .site-footer{background:#0E2E1D}
   .ms-reviews__overlay{background:rgba(10,25,16,.65)}
 }
+/* =========================================================
+   MOBILE STICKY QUOTE BANNER
+   ========================================================= */
+
+.ms-quote-banner{
+  display:none; /* hidden on desktop */
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:linear-gradient(90deg, var(--green-700), var(--green));
+  color:#fff;
+  text-align:center;
+  padding:1rem;
+  font-size:1.1rem;
+  font-weight:700;
+  letter-spacing:.03em;
+  z-index:9999;
+  box-shadow:0 -4px 12px rgba(0,0,0,.25);
+  text-decoration:none;
+}
+
+.ms-quote-banner:hover{
+  background:linear-gradient(90deg, var(--green-800), var(--green-600));
+  text-decoration:none;
+}
+
+/* Show ONLY on mobile */
+@media (max-width: 768px){
+  .ms-quote-banner{
+    display:block;
+  }
+  
+  /* Add bottom padding so content doesn't get covered */
+  body{
+    padding-bottom:70px;
+  }
+}
