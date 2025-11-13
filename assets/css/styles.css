@@ -1,10 +1,8 @@
-/* =========================================================
+//* =========================================================
    Mosquito Solutions — styles.css  (v7)
    - Evergreen / classic look with centered logo + slim nav
-   - Index layout: photo left + promo card right, yellow apiary band,
-     grass reviews band
-   - Re-usable components for other pages (cards, info blocks, forms)
-   - Services page: overview grid, checklist, steps, pricing, mini-FAQ
+   - Mobile-friendly: hamburger menu, stacked layouts
+   - Shared components for all pages
    ========================================================= */
 
 /* ---------- Design tokens ---------- */
@@ -44,7 +42,11 @@ a:hover{text-decoration:underline}
 .small{font-size:.92rem;color:#64748B}
 
 /* Serif display for classic headings */
-.h-serif{font-family:"Playfair Display", Georgia, serif; font-weight:700; color:#42553f}
+.h-serif{
+  font-family:"Playfair Display", Georgia, serif;
+  font-weight:700;
+  color:#42553f;
+}
 
 /* Focus & motion */
 :focus-visible{outline:3px solid var(--ring);outline-offset:2px}
@@ -59,30 +61,75 @@ a:hover{text-decoration:underline}
   padding:.5rem 1rem;border-radius:10px;z-index:1000
 }
 
-/* ---------- Header (center logo + slim uppercase nav) ---------- */
-.ms-header{padding:28px 0 6px;border-bottom:1px solid #ECF1EA}
-.ms-logo{height:76px;width:auto;margin:0 auto;display:block}
-.ms-logo-link{display:inline-block}
-.ms-company-name{
-  text-align:center;
-  font-family:"Playfair Display", Georgia, serif;
-  font-size:1.6rem;
-  font-weight:700;
-  color:var(--green);
-  letter-spacing:.02em;
-  margin-top:4px;
+/* =========================================================
+   HEADER + NAV (desktop & mobile)
+   ========================================================= */
+.ms-header{
+  border-bottom:1px solid #ECF1EA;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:40;
 }
+.ms-header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  padding:16px 0 10px;
+  position:relative;
+}
+.ms-logo{height:76px;width:auto;display:block}
+.ms-logo-link{display:inline-block}
+
+.ms-company-name{
+  font-family:"Playfair Display", Georgia, serif;
+  font-size:1.4rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#2a362e;
+}
+
+/* desktop nav */
 .ms-nav{
-  margin-top:10px;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap
+  display:flex;
+  gap:1.5rem;
+  align-items:center;
+  justify-content:flex-end;
 }
 .ms-nav__link{
-  font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;
-  color:#2a362e;padding:.4rem .3rem;border-radius:6px
+  font-size:.82rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#2a362e;
+  padding:.4rem .3rem;
+  border-radius:6px;
 }
 .ms-nav__link:hover{background:#eff6f0;text-decoration:none}
 .ms-nav__link.active{font-weight:700;color:var(--green)}
 
-/* ---------- Buttons ---------- */
+/* hamburger button (hidden on desktop) */
+.ms-menu-toggle{
+  display:none;
+  border:none;
+  background:none;
+  cursor:pointer;
+  padding:.35rem;
+  border-radius:8px;
+}
+.ms-menu-toggle span{
+  display:block;
+  width:20px;
+  height:2px;
+  background:#1f2a21;
+  border-radius:999px;
+  margin:3px 0;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
   padding:.78rem 1.1rem;border-radius:999px;
@@ -97,7 +144,9 @@ a:hover{text-decoration:underline}
 .btn-dark:hover{box-shadow:0 12px 28px rgba(21,94,59,.35)}
 .btn-outline{background:#fff;border:1px solid #ccdcd2;color:#1f2d24}
 
-/* ---------- INDEX: hero (photo left + promo card right) ---------- */
+/* =========================================================
+   INDEX: HERO (photo left + promo card right)
+   ========================================================= */
 .ms-hero{padding:48px 0}
 .ms-hero__grid{
   display:grid;grid-template-columns:1.3fr .9fr;gap:28px;align-items:stretch
@@ -109,19 +158,19 @@ a:hover{text-decoration:underline}
   padding:28px 26px;display:flex;flex-direction:column;justify-content:center;
   text-align:center;box-shadow:var(--shadow)
 }
-.ms-hero__card h1{
+.ms-hero__card h2{
   font-family:"Playfair Display", Georgia, serif;
   font-weight:700;line-height:1.25;font-size:1.75rem;margin:0 0 .5rem
 }
 .ms-hero__sub{color:#5c6a60;font-style:italic;margin:.25rem 0 1.1rem}
 .ms-hero__actions{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
 
-/* ---------- INDEX: centered intro ---------- */
+/* INDEX: centered intro */
 .ms-intro{padding:34px 0 12px}
 .ms-intro h2{font-size:2rem;margin:.4rem 0 .35rem;text-align:center}
 .ms-intro p{color:#3f4e44;text-align:center}
 
-/* ---------- INDEX: apiary (yellow band) ---------- */
+/* INDEX: apiary (yellow band) */
 .ms-apiary{
   background:var(--yellow);padding:40px 0;
   border-top:1px solid #EDD447;border-bottom:1px solid #EDD447
@@ -134,7 +183,7 @@ a:hover{text-decoration:underline}
 .ms-apiary__photo{border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
 .ms-apiary__photo img{width:100%;height:100%;object-fit:cover}
 
-/* ---------- INDEX: reviews band (grass background) ---------- */
+/* INDEX: reviews band (grass background) */
 .ms-reviews{
   background:url("../img/grass.jpg") center/cover no-repeat fixed;
   min-height:280px;display:flex;align-items:center;justify-content:center
@@ -143,7 +192,9 @@ a:hover{text-decoration:underline}
 .ms-reviews .h-serif{color:#E7F6ED;text-align:center}
 .ms-reviews__soon{color:#E7F6ED;text-align:center;margin-top:.4rem}
 
-/* ---------- Generic sections, cards & info blocks (used sitewide) ---------- */
+/* =========================================================
+   GENERIC SECTIONS, CARDS & INFO BLOCKS
+   ========================================================= */
 .section{padding:2.6rem 0}
 .section-title{margin:0 0 .5rem}
 .cards{
@@ -159,7 +210,14 @@ a:hover{text-decoration:underline}
   box-shadow:var(--shadow);border:1px solid #E4EBE5;color:var(--ink)
 }
 
-/* ---------- Forms (contact) ---------- */
+/* basic grid (about page uses this) */
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+}
+
+/* forms (contact) */
 .info-callout label{display:block;font-weight:600;margin:.4rem 0 .15rem}
 .info-callout input,.info-callout textarea{
   width:100%;padding:.72rem;border-radius:10px;border:1px solid #D7E4DC;
@@ -168,45 +226,9 @@ a:hover{text-decoration:underline}
 .info-callout input:focus,.info-callout textarea:focus{outline-color:var(--ring)}
 .info-callout button{margin-top:.6rem}
 
-/* ---------- Footer ---------- */
-.site-footer{background:#0C3F20;color:#E9F9EF;margin-top:40px;padding:32px 0}
-.footer-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:1.25rem}
-.footer-grid a{color:#CFFAE2}
-.footer-grid ul{list-style:none;padding:0;margin:0}
-.footer-grid li{margin-bottom:.4rem}
-.footer-grid h4{margin-top:0}
-
-/* ---------- Responsive ---------- */
-@media (max-width:980px){
-  .ms-hero__grid{grid-template-columns:1fr;gap:18px}
-  .ms-apiary__grid{grid-template-columns:1fr}
-  .ms-logo{height:64px}
-}
-@media (max-width:640px){
-  .ms-nav{gap:1rem}
-  .ms-hero__card h1{font-size:1.5rem}
-}
-
-/* ---------- Optional dark-scheme polish ---------- */
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0C1210; --surface:#101814; --ink:#E9F4EE; --muted:#B6C7BC;
-    --green:#2CA070; --green-600:#2AA06E; --green-800:#124B31; --green-soft:#122019;
-    --ring:#2BA87E
-  }
-  .ms-header{border-bottom:1px solid #1E2F27}
-  .ms-company-name{color:#39c57c}
-  .ms-nav__link:hover{background:#15241c}
-  .card,.info-callout{border-color:#1E2F27}
-  .site-footer{background:#0E2E1D}
-  .ms-reviews__overlay{background:rgba(10,25,16,.65)}
-}
-
 /* =========================================================
    SERVICES PAGE
    ========================================================= */
-
-/* Hero */
 .svc-hero{padding:22px 0 12px}
 .svc-hero__frame{
   max-width:1180px;margin:0 auto;border-radius:14px;overflow:hidden;
@@ -216,81 +238,164 @@ a:hover{text-decoration:underline}
 .svc-hero__headline{margin-top:16px;text-align:center}
 .svc-hero__headline p{color:#3f4e44}
 
-/* Overview */
-.svc-overview{
-  display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start
+/* “What is the service?” split block */
+.svc-split{
+  display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start
 }
-.svc-eyebrow{margin:0 0 .3rem;font-weight:700;letter-spacing:.02em}
+.svc-split__title h2{margin:.2rem 0 0}
+.svc-center{font-size:1.06rem;text-align:center;color:#3f4e44}
 
-/* What we treat — checklist */
-.checklist{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:.65rem 1.25rem;margin-top:.6rem;padding-left:0;list-style:none
+/* Two text columns */
+.svc-columns{
+  display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:.6rem
 }
-.checklist li{
-  position:relative;padding-left:1.6rem
-}
-.checklist li::before{
-  content:"✓"; position:absolute; left:0; top:0; font-weight:800; color:var(--green)
-}
-
-/* How it works — steps */
-.steps{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1rem;margin-top:.6rem
-}
-.steps li{
-  list-style:none;background:var(--surface);border:1px solid #E4EBE5;
-  border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)
-}
-.steps h3{margin:.1rem 0 .35rem}
-
-/* Program / pricing helpers */
-.price-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:.8rem;margin-top:.6rem
-}
-.price-card{
-  border:1px dashed #cfe0d6;border-radius:12px;padding:.9rem 1rem;background:var(--surface)
-}
-.price-name{font-weight:700;margin-bottom:.15rem}
-.price-note{color:#516158}
-
-/* Compact FAQ */
-.faq-row{
-  border:1px solid #E4EBE5;border-radius:12px;padding:.8rem 1rem;margin:.6rem 0;background:var(--surface)
-}
-.faq-row summary{font-weight:600;cursor:pointer}
-.faq-row[open]{box-shadow:var(--shadow)}
-.faq-row p{margin:.6rem 0 0}
+.svc-columns h3{margin:0 0 .35rem}
+.svc-columns p{margin:0;color:#39483e}
 
 /* CTA band reuse */
 .cta-band{
-  background:linear-gradient(90deg,#0f3a1f,#136d3b);color:#eafff2;padding:1rem 0;
-  border-top:1px solid #0f3a1f;border-bottom:1px solid #0f3a1f
+  background:linear-gradient(90deg,#0f3a1f,#136d3b);
+  color:#eafff2;
+  padding:1rem 0;
+  border-top:1px solid #0f3a1f;
+  border-bottom:1px solid #0f3a1f
 }
 .cta-band p{margin:.2rem 0 0}
 .svc-cta{display:flex;gap:.6rem;margin-top:.4rem;flex-wrap:wrap}
 
-/* Split/columns helpers (optional text sections) */
-.svc-split{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start}
-.svc-split__title h2{margin:.2rem 0 0}
-.svc-center{font-size:1.06rem;text-align:center;color:#3f4e44}
-.svc-columns{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:.6rem}
-.svc-columns h3{margin:0 0 .35rem}
-.svc-columns p{margin:0;color:#39483e}
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq-row{
+  border:1px solid #E4EBE5;
+  border-radius:var(--radius);
+  padding:.75rem 1rem;
+  margin:.6rem 0;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+}
+.faq-row[open]{border-color:var(--ring)}
+.faq-row summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.75rem;
+  font-weight:600;
+}
+.faq-row summary::-webkit-details-marker{display:none}
+.faq-row p{margin:.5rem 0 0}
 
-/* Responsive */
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer{
+  background:#0C3F20;
+  color:#E9F9EF;
+  margin-top:40px;
+  padding:32px 0;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr 1fr;
+  gap:1.25rem;
+}
+.footer-grid a{color:#CFFAE2}
+.footer-grid ul{list-style:none;padding:0;margin:0}
+.footer-grid li{margin-bottom:.4rem}
+.footer-grid h4{margin-top:0}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* Tablet + down */
 @media (max-width:980px){
-  .svc-overview{grid-template-columns:1fr}
+  .ms-hero__grid{grid-template-columns:1fr;gap:18px}
+  .ms-apiary__grid{grid-template-columns:1fr}
+  .ms-logo{height:64px}
   .svc-split{grid-template-columns:1fr}
   .svc-columns{grid-template-columns:1fr}
 }
 
-/* Dark-scheme tuning for Services */
+/* Mobile nav + small-screen tweaks */
+@media (max-width:768px){
+  .ms-header-inner{
+    align-items:center;
+    gap:.75rem;
+  }
+
+  .ms-company-name{
+    font-size:1rem;
+    letter-spacing:.16em;
+  }
+
+  .ms-menu-toggle{
+    display:inline-flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+
+  /* hide nav by default on mobile */
+  .ms-nav{
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    background:#0f1713;
+    border-top:1px solid #1e2f27;
+    padding:.5rem 1.25rem 1rem;
+    display:none;
+    flex-direction:column;
+    gap:.25rem;
+  }
+  .ms-nav.is-open{display:flex;}
+
+  .ms-nav__link{
+    color:#d9fbe8;
+    padding:.5rem 0;
+    width:100%;
+  }
+  .ms-nav__link:hover{
+    background:transparent;
+    text-decoration:underline;
+  }
+  .ms-nav__link.active{
+    color:#9ff3c3;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .svc-hero__headline p,
+  .ms-intro p{
+    text-align:left;
+  }
+}
+
+/* Extra small screens */
+@media (max-width:480px){
+  .ms-hero{padding:28px 0}
+  .ms-hero__card h2{font-size:1.4rem}
+  .ms-apiary{padding:28px 0}
+  .section{padding:2rem 0}
+}
+
+/* =========================================================
+   OPTIONAL DARK-SCHEME POLISH
+   ========================================================= */
 @media (prefers-color-scheme: dark){
-  .svc-hero__headline p{color:#cfe3d7}
-  .faq-row{border-color:#1E2F27}
-  .price-card{border-color:#274034}
-  .checklist li::before{color:#39c57c}
+  :root{
+    --bg:#0C1210; --surface:#101814; --ink:#E9F4EE; --muted:#B6C7BC;
+    --green:#2CA070; --green-600:#2AA06E; --green-800:#124B31; --green-soft:#122019;
+    --ring:#2BA87E
+  }
+  .ms-header{border-bottom:1px solid #1E2F27;background:rgba(12,18,16,.97)}
+  .ms-nav__link:hover{background:#15241c}
+  .card,.info-callout,.faq-row{border-color:#1E2F27}
+  .site-footer{background:#0E2E1D}
+  .ms-reviews__overlay{background:rgba(10,25,16,.65)}
 }
